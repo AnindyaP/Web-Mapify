@@ -136,3 +136,60 @@ class HeroAnimation {
 }
 
 export default HeroAnimation;
+
+const links = document.querySelectorAll('.navbar .nav-link');
+        const currentLocation = window.location.href;
+
+        links.forEach(link => {
+            if (link.href === currentLocation) {
+            link.classList.add('active');
+            }
+        });
+
+
+
+document.getElementById("card").addEventListener("click", function() {
+  window.location.href = "detail-siomay.html"; 
+});
+
+
+let likeCount = 0;
+let dislikeCount = 0;
+
+document.getElementById("like-btn").addEventListener("click", function(event) {
+  event.stopPropagation(); 
+  likeCount++;
+  document.getElementById("like-count").textContent = likeCount;
+});
+
+document.getElementById("dislike-btn").addEventListener("click", function(event) {
+  event.stopPropagation();
+  dislikeCount++;
+  document.getElementById("dislike-count").textContent = dislikeCount;
+});
+
+
+
+  function initMap() {
+    // Ganti koordinat berikut dengan lokasi kamu (contoh: Patemon, Semarang)
+    const lokasi = { lat: -7.0124, lng: 110.3814 };
+
+    // Buat peta
+    const map = new google.maps.Map(document.getElementById("map"), {
+      zoom: 15,
+      center: lokasi,
+    });
+
+    // Tambahkan penanda (marker)
+    const marker = new google.maps.Marker({
+      position: lokasi,
+      map: map,
+      title: "Siomay Patemon",
+    });
+  }
+
+
+
+  src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"
+
+

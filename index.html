@@ -3,182 +3,452 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Echofy - Environmental Website</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Mapify - UMKM Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
-    
+
 </head>
 
-<body>
+<body> 
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-gradient-dark fixed-top">
         <div class="container">
             <a class="navbar-brand" href="index.html">
-                <img src="./img/logo.png" alt="Echofy" height="40">
+                <img src="./img/mapify.png" alt="Mapify" height="40">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
+            
             <div class="navigation-bar" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#service">Service</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#pages">Pages</a></li>
-                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">Tentang</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Berita</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Kontak</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
+    <script>
+        const links = document.querySelectorAll('.navbar .nav-link');
+        const currentLocation = window.location.href;
+
+        links.forEach(link => {
+            if (link.href === currentLocation) {
+            link.classList.add('active');
+            }
+        });
+    </script>
+
     <!-- Hero Section -->
     <section class="hero-section d-flex align-items-center text-white">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6">
-                    <h1 class="display-4 fw-bold mb-4">Be Safe Controls Environment</h1>
-                    <p class="lead mb-4">Professionally optimize knowledgeable intellectual interoperable connect best practices. Progressively fabricate ideas.</p>
-                    <a href="contact.html" class="custom-btn me-3" style="text-decoration: none;" >Let's Talk</a>
-                    <button class="btn btn-outline-light">Read More</button>
+                <div class= "container text-center">
+                    <h1 class="display-4 fw-bold">Selamat Datang</h1>
+                    <marquee behavior="scroll" direction="left" scrollamount="6" class="text-marquee">
+                        Inovasi  Geografi Informasi Sistem (GIS) untuk Optimalisasi Jangkauan dan Potensi UMKM di Era Digital
+                    </marquee>
                 </div>
+
+                <div class="container">
+                  <div class= "container text-center">
+                    <div class="glass-card">
+
+                    <div class="input-group">
+                     <span class="input-group-text">
+                        <i class="bi bi-search"></i>
+                    </span>
+
+                    <input type="text" class="form-control" placeholder="Cari sesuatu...">
+
+                    <button class="btn btn-scan" id="btnScan">
+                        <i class="bi bi-camera"></i> Scan
+                    </button>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                  
+
+              </div>
             </div>
         </div>
     </section>
 
-    <!-- Tags Section -->
-    <div class="container-fluid bg-light py-3">
+    <!-- Tag Filter Section -->
+    <div class="container-fluid bg-success py-3">
         <div class="container">
             <div class="d-flex flex-wrap justify-content-center gap-3">
-                <span class="tag">Ocean-Recycling</span>
-                <span class="tag">Environmental</span>
-                <span class="tag">Renewable-Energy</span>
-                <span class="tag">Ocean-Recycling</span>
-                <span class="tag">Environmental</span>
+                <a class="tag-filter" href="#">
+                    <i class="bi bi-egg-fried me-2"></i> Makanan
+                </a>
+                <a class="tag-filter" href="#">
+                    <i class="bi bi-cup-straw me-2"></i> Minuman
+                </a>
+                <a class="tag-filter" href="#">
+                    <i class="bi bi-flower3 me-2"></i> Budidaya
+                </a>
+                <a class="tag-filter" href="#">
+                    <i class="bi bi-gear me-2"></i> Jasa
+                </a>
             </div>
         </div>
     </div>
 
-    <!-- About Section -->
-    <section class="py-5" id="about">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <img src="./img/about.jpg" alt="Award Winning" class="img-fluid rounded-3">
+
+
+    <!-- Section UMKM 1-->
+    <section class="py-5">
+    <div class="container">
+        <div class="row g-4 justify-content-center">
+
+        <!-- Card 1 -->
+        <div class="col-md-3">
+            <div class="card h-100 shadow umkm-item">
+            <a href="./detail UMKM/siomay.html" class="card-link text-decoration-none text-dark">
+                <img src="./assets/img/siomay1.jpg" class="card-img-top" alt="Siomay Patemon">
+                <div class="card-body">
+                <h6 class="card-title">Siomay Patemon: Cita Rasa Legendaris</h6>
+                <div class="location-card-umkm">
+                    <i class="fas fa-map-marker-alt"></i> Patemon
                 </div>
-                <div class=" py-5 col-lg-6">
-                    <h2 class="display-6 fw-bold mb-4">Environmental Sustainable Forever Green Future</h2>
-                    <div class="mb-4">
-                        <h5>Economic Benefits</h5>
-                        <p>Alternative innovation offer afford etc network environment connect best practices...</p>
-                    </div>
-                    <div class="mb-4">
-                        <h5>Safe Environment</h5>
-                        <p>Alternative innovation offer afford etc network environment connect best practices...</p>
-                    </div>
-                    <a href="about.html" class="custom-btn" style="text-decoration: none;">More About</a>
+                </div>
+            </a>
+            <div class="reaction d-flex justify-content-between align-items-center p-3">
+                <div>
+                <i class="bi bi-hand-thumbs-up like-btn"></i>
+                <span class="like-count">0</span>
+                <i class="bi bi-hand-thumbs-down dislike-btn ms-3"></i>
+                <span class="dislike-count">0</span>
                 </div>
             </div>
+            </div>
         </div>
+
+        <!-- Card 2 -->
+        <div class="col-md-3">
+            <div class="card h-100 shadow umkm-item">
+            <a href="detail-siomay.html" class="card-link text-decoration-none text-dark">
+                <img src="./assets/img/siomay2.jpg" class="card-img-top" alt="Siomay Bandung">
+                <div class="card-body">
+                <h6 class="card-title">Siomay Bandung: Gurih Menggoda</h6>
+                <div class="location-card-umkm">
+                    <i class="fas fa-map-marker-alt"></i> Semarang Tengah
+                </div>
+                </div>
+            </a>
+            <div class="reaction d-flex justify-content-between align-items-center p-3">
+                <div>
+                <i class="bi bi-hand-thumbs-up like-btn"></i>
+                <span class="like-count">0</span>
+                <i class="bi bi-hand-thumbs-down dislike-btn ms-3"></i>
+                <span class="dislike-count">0</span>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col-md-3">
+            <div class="card h-100 shadow umkm-item">
+            <a href="detail-siomay.html" class="card-link text-decoration-none text-dark">
+                <img src="./assets/img/siomay3.jpg" class="card-img-top" alt="Siomay Seafood">
+                <div class="card-body">
+                <h6 class="card-title">Siomay Seafood: Lezat dan Segar</h6>
+                <div class="location-card-umkm">
+                    <i class="fas fa-map-marker-alt"></i> Banyumanik
+                </div>
+                </div>
+            </a>
+            <div class="reaction d-flex justify-content-between align-items-center p-3">
+                <div>
+                <i class="bi bi-hand-thumbs-up like-btn"></i>
+                <span class="like-count">0</span>
+                <i class="bi bi-hand-thumbs-down dislike-btn ms-3"></i>
+                <span class="dislike-count">0</span>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="col-md-3">
+            <div class="card h-100 shadow umkm-item">
+            <a href="detail-siomay.html" class="card-link text-decoration-none text-dark">
+                <img src="./assets/img/siomay4.jpg" class="card-img-top" alt="Siomay Goreng">
+                <div class="card-body">
+                <h6 class="card-title">Siomay Goreng: Renyah di Luar, Lembut di Dalam</h6>
+                <div class="location-card-umkm">
+                    <i class="fas fa-map-marker-alt"></i> Tembalang
+                </div>
+                </div>
+            </a>
+            <div class="reaction d-flex justify-content-between align-items-center p-3">
+                <div>
+                <i class="bi bi-hand-thumbs-up like-btn"></i>
+                <span class="like-count">0</span>
+                <i class="bi bi-hand-thumbs-down dislike-btn ms-3"></i>
+                <span class="dislike-count">0</span>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        </div>
+    </div>
     </section>
 
-    <!-- Services Section -->
-    <section class="py-5 bg-light" id="service">
-        <div class="container">
-            <h2 class="py-5 display-6 fw-bold mb-5 text-center" >Echofy Provide Environment Best Leading Services</h2>
-            <div class="row g-4">
-                <div class="col-lg-4">
-                    <div class="card service-card h-100">
-                        <div class="card-body text-center">
-                            <div class="icon-circle mb-4">
-                                <i class="fas fa-recycle"></i>
-                            </div>
-                            <h4>Dirty Recycling</h4>
-                            <p>Reprocessing of contaminated or improperly sorted waste materials, ensuring they are reused efficiently and safely.</p>
-                            <img src="./img/dirty-recycling.jpg" alt="Recycling" class="img-fluid rounded-3">
-                        </div>
-                    </div>
+
+    <!-- Section UMKM 2-->
+    <section class="py-5">
+    <div class="container">
+        <div class="row g-4 justify-content-center">
+
+        <!-- Card 1 -->
+        <div class="col-md-3">
+            <div class="card h-100 shadow umkm-item">
+            <a href="detail-siomay.html" class="card-link text-decoration-none text-dark">
+                <img src="./assets/img/siomay1.jpg" class="card-img-top" alt="Siomay Patemon">
+                <div class="card-body">
+                <h6 class="card-title">Siomay Patemon: Cita Rasa Legendaris</h6>
+                <div class="location-card-umkm">
+                    <i class="fas fa-map-marker-alt"></i> Patemon
                 </div>
-                <div class="col-lg-4">
-                    <div class="card service-card h-100">
-                        <div class="card-body text-center">
-                            <div class="icon-circle mb-4">
-                                <i class="fas fa-leaf"></i>
-                            </div>
-                            <h4>Safe Environment</h4>
-                            <p>Ensuring clean and healthy spaces by reducing pollution and increasing sustainability.</p>
-                            <img src="./img/safe-environment.jpg" alt="Environment" class="img-fluid rounded-3">
-                        </div>
-                    </div>
                 </div>
-                <div class="col-lg-4">
-                    <div class="card service-card h-100">
-                        <div class="card-body text-center">
-                            <div class="icon-circle mb-4">
-                                <i class="fas fa-water"></i>
-                            </div>
-                            <h4>Cleaning Ocean</h4>
-                            <p>Involves the removal of pollutants and waste to protect marine life and preserve aquatic ecosystems.</p>
-                            <img src="./img/cleaning-ocean.jpg" alt="Ocean" class="img-fluid rounded-3">
-                        </div>
-                    </div>
+            </a>
+            <div class="reaction d-flex justify-content-between align-items-center p-3">
+                <div>
+                <i class="bi bi-hand-thumbs-up like-btn"></i>
+                <span class="like-count">0</span>
+                <i class="bi bi-hand-thumbs-down dislike-btn ms-3"></i>
+                <span class="dislike-count">0</span>
                 </div>
             </div>
+            </div>
         </div>
+
+        <!-- Card 2 -->
+        <div class="col-md-3">
+            <div class="card h-100 shadow umkm-item">
+            <a href="detail-siomay.html" class="card-link text-decoration-none text-dark">
+                <img src="./assets/img/siomay2.jpg" class="card-img-top" alt="Siomay Bandung">
+                <div class="card-body">
+                <h6 class="card-title">Siomay Bandung: Gurih Menggoda</h6>
+                <div class="location-card-umkm">
+                    <i class="fas fa-map-marker-alt"></i> Semarang Tengah
+                </div>
+                </div>
+            </a>
+            <div class="reaction d-flex justify-content-between align-items-center p-3">
+                <div>
+                <i class="bi bi-hand-thumbs-up like-btn"></i>
+                <span class="like-count">0</span>
+                <i class="bi bi-hand-thumbs-down dislike-btn ms-3"></i>
+                <span class="dislike-count">0</span>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col-md-3">
+            <div class="card h-100 shadow umkm-item">
+            <a href="detail-siomay.html" class="card-link text-decoration-none text-dark">
+                <img src="./assets/img/siomay3.jpg" class="card-img-top" alt="Siomay Seafood">
+                <div class="card-body">
+                <h6 class="card-title">Siomay Seafood: Lezat dan Segar</h6>
+                <div class="location-card-umkm">
+                    <i class="fas fa-map-marker-alt"></i> Banyumanik
+                </div>
+                </div>
+            </a>
+            <div class="reaction d-flex justify-content-between align-items-center p-3">
+                <div>
+                <i class="bi bi-hand-thumbs-up like-btn"></i>
+                <span class="like-count">0</span>
+                <i class="bi bi-hand-thumbs-down dislike-btn ms-3"></i>
+                <span class="dislike-count">0</span>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="col-md-3">
+            <div class="card h-100 shadow umkm-item">
+            <a href="detail-siomay.html" class="card-link text-decoration-none text-dark">
+                <img src="./assets/img/siomay4.jpg" class="card-img-top" alt="Siomay Goreng">
+                <div class="card-body">
+                <h6 class="card-title">Siomay Goreng: Renyah di Luar, Lembut di Dalam</h6>
+                <div class="location-card-umkm">
+                    <i class="fas fa-map-marker-alt"></i> Tembalang
+                </div>
+                </div>
+            </a>
+            <div class="reaction d-flex justify-content-between align-items-center p-3">
+                <div>
+                <i class="bi bi-hand-thumbs-up like-btn"></i>
+                <span class="like-count">0</span>
+                <i class="bi bi-hand-thumbs-down dislike-btn ms-3"></i>
+                <span class="dislike-count">0</span>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        </div>
+    </div>
     </section>
 
-    <!-- Progress Section -->
-    <section class="py-5" id="pages">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <h2 class="display-6 fw-bold mb-4">Getting A Greener Future Safe Environment</h2>
-                    <p class="mb-4">Alternative innovation offer afford etc network environment connect best practices...</p>
-                    <div class="mb-4">
-                        <div class="d-flex justify-content-between mb-2">
-                            <span>Ocean Cleaning</span>
-                            <span>85%</span>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar" style="width: 85%"></div>
-                        </div>
-                    </div>
-                    <div class="mb-4">
-                        <div class="d-flex justify-content-between mb-2">
-                            <span>Safe Environment</span>
-                            <span>90%</span>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar" style="width: 90%"></div>
-                        </div>
-                    </div>
+
+      <!-- Section UMKM 3-->
+    <section class="py-5">
+    <div class="container">
+        <div class="row g-4 justify-content-center">
+
+        <!-- Card 1 -->
+        <div class="col-md-3">
+            <div class="card h-100 shadow umkm-item">
+            <a href="detail-siomay.html" class="card-link text-decoration-none text-dark">
+                <img src="./assets/img/siomay1.jpg" class="card-img-top" alt="Siomay Patemon">
+                <div class="card-body">
+                <h6 class="card-title">Siomay Patemon: Cita Rasa Legendaris</h6>
+                <div class="location-card-umkm">
+                    <i class="fas fa-map-marker-alt"></i> Patemon
                 </div>
-                <div class="col-lg-6">
-                    <img src="./img/planet.jpg" alt="Planet" class="img-fluid rounded-circle">
+                </div>
+            </a>
+            <div class="reaction d-flex justify-content-between align-items-center p-3">
+                <div>
+                <i class="bi bi-hand-thumbs-up like-btn"></i>
+                <span class="like-count">0</span>
+                <i class="bi bi-hand-thumbs-down dislike-btn ms-3"></i>
+                <span class="dislike-count">0</span>
                 </div>
             </div>
+            </div>
         </div>
+
+        <!-- Card 2 -->
+        <div class="col-md-3">
+            <div class="card h-100 shadow umkm-item">
+            <a href="detail-siomay.html" class="card-link text-decoration-none text-dark">
+                <img src="./assets/img/siomay2.jpg" class="card-img-top" alt="Siomay Bandung">
+                <div class="card-body">
+                <h6 class="card-title">Siomay Bandung: Gurih Menggoda</h6>
+                <div class="location-card-umkm">
+                    <i class="fas fa-map-marker-alt"></i> Semarang Tengah
+                </div>
+                </div>
+            </a>
+            <div class="reaction d-flex justify-content-between align-items-center p-3">
+                <div>
+                <i class="bi bi-hand-thumbs-up like-btn"></i>
+                <span class="like-count">0</span>
+                <i class="bi bi-hand-thumbs-down dislike-btn ms-3"></i>
+                <span class="dislike-count">0</span>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col-md-3">
+            <div class="card h-100 shadow umkm-item">
+            <a href="detail-siomay.html" class="card-link text-decoration-none text-dark">
+                <img src="./assets/img/siomay3.jpg" class="card-img-top" alt="Siomay Seafood">
+                <div class="card-body">
+                <h6 class="card-title">Siomay Seafood: Lezat dan Segar</h6>
+                <div class="location-card-umkm">
+                    <i class="fas fa-map-marker-alt"></i> Banyumanik
+                </div>
+                </div>
+            </a>
+            <div class="reaction d-flex justify-content-between align-items-center p-3">
+                <div>
+                <i class="bi bi-hand-thumbs-up like-btn"></i>
+                <span class="like-count">0</span>
+                <i class="bi bi-hand-thumbs-down dislike-btn ms-3"></i>
+                <span class="dislike-count">0</span>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="col-md-3">
+            <div class="card h-100 shadow umkm-item">
+            <a href="detail-siomay.html" class="card-link text-decoration-none text-dark">
+                <img src="./assets/img/siomay4.jpg" class="card-img-top" alt="Siomay Goreng">
+                <div class="card-body">
+                <h6 class="card-title">Siomay Goreng: Renyah di Luar, Lembut di Dalam</h6>
+                <div class="location-card-umkm">
+                    <i class="fas fa-map-marker-alt"></i> Tembalang
+                </div>
+                </div>
+            </a>
+            <div class="reaction d-flex justify-content-between align-items-center p-3">
+                <div>
+                <i class="bi bi-hand-thumbs-up like-btn"></i>
+                <span class="like-count">0</span>
+                <i class="bi bi-hand-thumbs-down dislike-btn ms-3"></i>
+                <span class="dislike-count">0</span>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        </div>
+    </div>
     </section>
+
+
+
+
+    <section id="lokasi" class="py-5">
+    <div class="container text-center">
+        <div class="lokasi-card p-4 rounded-4 shadow-lg mx-auto">
+        <h1 class="mb-4 text-white fw-bold">Temukan Lokasi UMKM</h1>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d247.4739036193871!2d110.3971421859594!3d-7.058247753323418!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e708968a9b5ccc3%3A0x5027a76e356e080!2sPatemon%2C%20Kec.%20Gn.%20Pati%2C%20Kota%20Semarang%2C%20Jawa%20Tengah!5e0!3m2!1sid!2sid!4v1761825104240!5m2!1sid!2sid"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+    </section>
+
+
+
+
+    
+
+
+
 
     <!-- footer -->
     <footer>
         <div class="cols">
             <div class="about-col">
-                <h3>Ecofy</h3>
+                <h3>Mapify</h3>
                 <p>Be Safe Controls Environment</p>
             </div>
 
-            <<div class="links-col">
+            <div class="links-col">
                 <h4>Useful Links</h4>
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="index.html#skills">Service</a></li>
-                    <li class="nav-item"><a class="nav-link" href="index.html#skills">Pages</a></li>
-                    <li class="nav-item"><a class="nav-link" href="index.html#skills">Blog</a></li>
-                    <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
+                   <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">Tentang</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Berita</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Kontak</a></li>
                 </ul>
             </div>
             
@@ -206,6 +476,16 @@
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+
+    <script>
+        document.getElementById("btnScan").addEventListener("click", function() {
+        alert("Fitur scanner akan aktif di versi berikutnya!");
+        // Nanti bisa diganti dengan kode QR scanner atau camera API
+        });
+    </script>
+
 </body>
 </html>
+

@@ -7,36 +7,47 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
        <!-- Navbar -->
        <<nav class="navbar navbar-expand-lg navbar-dark bg-gradient-dark fixed-top">
         <div class="container">
             <a class="navbar-brand" href="index.html">
-                <img src="./img/logo.png" alt="Echofy" height="40">
+                <img src="./img/logo.png" alt="Mapify" height="40">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="navigation-bar collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="index.html#service">Service</a></li>
-                    <li class="nav-item"><a class="nav-link" href="index.html#pages">Pages</a></li>
-                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">Tentang</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Berita</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Kontak</a></li>
                 </ul>
             </div>
         </div>
     </nav>
+
+    <script>
+        const links = document.querySelectorAll('.navbar .nav-link');
+        const currentLocation = window.location.href;
+
+        links.forEach(link => {
+            if (link.href === currentLocation) {
+            link.classList.add('active');
+            }
+        });
+    </script>
+
     
 
     <!-- Hero Section -->
     <section class="hero-section-3 text-white d-flex align-items-center">
         <div class="container text-center">
-            <h1 class="display-4 fw-bold">Our Blog</h1>
-            <p class="lead">Insights, tips, and updates on environmental topics.</p>
+            <h1 class="display-4 fw-bold">Berita Kami</h1>
+            <p class="lead">Wawasan, tips, dan pembaruan seputar UMKM di Mapify</p>
         </div>
     </section>
 
@@ -118,23 +129,21 @@
         </div>
     </section>
 
-    <!-- footer -->
+     <!-- footer -->
     <footer>
         <div class="cols">
             <div class="about-col">
-                <h3>Ecofy</h3>
+                <h3>Mapify</h3>
                 <p>Be Safe Controls Environment</p>
             </div>
 
-            <<div class="links-col">
+            <div class="links-col">
                 <h4>Useful Links</h4>
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="index.html#skills">Service</a></li>
-                    <li class="nav-item"><a class="nav-link" href="index.html#skills">Pages</a></li>
-                    <li class="nav-item"><a class="nav-link" href="index.html#skills">Blog</a></li>
-                    <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
+                   <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">Tentang</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Berita</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Kontak</a></li>
                 </ul>
             </div>
             
@@ -161,6 +170,7 @@
 
         </div>
     </footer>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
