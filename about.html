@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - Echofy</title>
+    <title>About - Mapify</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
@@ -13,7 +13,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-gradient-dark fixed-top">
         <div class="container">
             <a class="navbar-brand" href="index.html">
-                <img src="./img/logo.png" alt="Mapify" height="40">
+                <img src="./img/logo-mapify.png" alt="Mapify" height="45">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -51,62 +51,71 @@
     <!-- About Section -->
     <section class="py-5">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6 mb-4">
-                    <img src="./img/aboutus.jpg" alt="About Image" class="img-fluid rounded-3 shadow">
-                </div>
-                <div class="about-us col-lg-6">
-                    <h2 class="fw-bold">Ketahui Tentang Mapify</h2>
-                    <p class="mb-4">At Echofy, we aim to create a sustainable future for generations to come by pioneering innovative environmental solutions. Our focus is on developing practical strategies that address pressing ecological challenges, from waste management and recycling to renewable energy and conservation efforts. By actively collaborating with communities, industries, and governments, we strive to implement impactful solutions that not only protect our planet but also promote a cleaner, greener, and more resilient world for future generations.</p>
-                    <ul>
-                        <li><strong>Mission :</strong>Providing eco-friendly solutions.</li>
-                        <li><strong>Vision  :</strong> A greener planet for future generations.</li>
-                        <li><strong>Values  :</strong> Innovation, sustainability, and responsibility.</li>
-                    </ul>
-                </div>
+            <div class="row align-items-start"> <!-- ubah dari align-items-center ke start -->
+            <div class="col-lg-6 mb-4 d-flex align-items-start"> <!-- tambah d-flex -->
+                <img src="./img/tentang.jpg" alt="About Image" class="img-fluid rounded-3 shadow about-img">
+            </div>
+            <div class="about-us col-lg-6">
+                <h2 class="fw-bold">Ketahui Tentang Mapify</h2>
+                <p class="mb-4">
+                Mapify merupakan platform digital berbasis peta interaktif yang dirancang untuk membantu Usaha Mikro, Kecil, dan Menengah (UMKM) lokal agar lebih mudah ditemukan oleh masyarakat. Melalui integrasi sistem informasi geografis (SIG), Mapify menampilkan lokasi UMKM yang sebelumnya belum terdaftar di peta digital, serta menyediakan berbagai fitur inovatif untuk memperluas jangkauan promosi dan meningkatkan interaksi dengan konsumen.
+                Di Mapify, setiap UMKM memiliki profil digital yang menampilkan informasi lengkap mengenai usaha, mulai dari deskripsi, produk, kontak, hingga lokasi. Pengguna juga dapat memberikan penilaian dan ulasan (fitur Like, Dislike, dan Review), mencari usaha menggunakan fitur scan kamera, atau menelusuri kategori tertentu seperti makanan, minuman, dan jasa melalui filter kategori.
+                Dengan adanya fitur rute yang terhubung langsung ke Google Maps, pengguna dapat dengan mudah menavigasi lokasi UMKM yang diinginkan. Mapify hadir sebagai wadah kolaboratif antara pelaku UMKM dan masyarakat, dengan tujuan membangun ekosistem bisnis lokal yang kuat, mudah diakses, dan saling mendukung.
+                </p>
+
+                <ul>
+                <li><strong>Visi :</strong> Menjadi platform digital pemetaan UMKM terdepan di Indonesia yang membantu pelaku usaha lokal agar lebih dikenal, lebih mudah dijangkau, dan lebih berdaya saing di era digital.</li>
+                <li><strong>Misi :</strong>
+                    <ol>
+                    <li>Memetakan persebaran UMKM lokal melalui sistem informasi geografis yang interaktif dan informatif.</li>
+                    <li>Menghubungkan pelaku usaha dengan masyarakat melalui fitur pencarian, ulasan, dan promosi digital.</li>
+                    <li>Meningkatkan visibilitas UMKM yang belum terdaftar di peta digital seperti Google Maps.</li>
+                    <li>Mendorong digitalisasi UMKM dengan menyediakan profil usaha online yang menarik dan mudah diakses.</li>
+                    <li>Menumbuhkan dukungan lokal dengan memungkinkan pengguna menemukan dan menandai UMKM favorit mereka.</li>
+                    </ol>
+                </li>
+                </ul>
+            </div>
             </div>
         </div>
     </section>
+
 
     <!-- footer -->
     <footer>
         <div class="cols">
             <div class="about-col">
                 <h3>Mapify</h3>
-                <p>Be Safe Controls Environment</p>
+                <p>Jelajahi Potensi Lokal Bersama Mapify</p>
             </div>
 
             <div class="links-col">
-                <h4>Useful Links</h4>
+                <h4>Halaman</h4>
                 <ul class="navbar-nav ms-auto">
                    <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">Tentang</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">Tentang</a></li>
                     <li class="nav-item"><a class="nav-link" href="blog.html">Berita</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Kontak</a></li>
                 </ul>
             </div>
-            
 
             <div class="links-col">
-                <h4>Social Media</h4>
+                <h4>Media Sosial</h4>
                 <a href="#">Instagram</a>
                 <a href="#">Linkedin</a>
                 <a href="#">Twitter</a>
                 <a href="#">Youtube</a>
-                <a href="#">Github</a>
             </div>
 
             <div class="news-col">
-                <h4>NewsLetter</h4>
-                <p>Enter your email and get notified about news, of.</p>
+                <h4>Berita UMKM</h4>
+                <p>Masukkan Email dan dapatkan notifikasi terbaru</p>
 
                 <form>
-                    <input type="email" placeholder="Your email address">
+                    <input type="email" placeholder="Alamat email anda">
                     <button><i class='bx bxl-telegram'></i></button>
                 </form>
-
             </div>
-
         </div>
     </footer>
 

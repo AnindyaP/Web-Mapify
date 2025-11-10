@@ -17,7 +17,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-gradient-dark fixed-top">
         <div class="container">
             <a class="navbar-brand" href="index.html">
-                <img src="./img/mapify.png" alt="Mapify" height="40">
+                <img src="./img/logo-mapify.png" alt="Mapify" height="45">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -51,41 +51,26 @@
             <div class="row">
                 <div class= "container text-center">
                     <h1 class="display-4 fw-bold">Selamat Datang</h1>
-                    <marquee behavior="scroll" direction="left" scrollamount="6" class="text-marquee">
-                        Inovasi  Geografi Informasi Sistem (GIS) untuk Optimalisasi Jangkauan dan Potensi UMKM di Era Digital
-                    </marquee>
+                    <h2>Jelajahi Potensi Lokal Bersama Mapify</h2>
                 </div>
-
-                <div class="container">
-                  <div class= "container text-center">
-                    <div class="glass-card">
-
-                    <div class="input-group">
-                     <span class="input-group-text">
-                        <i class="bi bi-search"></i>
-                    </span>
-
-                    <input type="text" class="form-control" placeholder="Cari sesuatu...">
-
-                    <button class="btn btn-scan" id="btnScan">
-                        <i class="bi bi-camera"></i> Scan
-                    </button>
-
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                  
-
               </div>
             </div>
         </div>
     </section>
 
+     <marquee behavior="scroll" direction="left" scrollamount="6" class="text-marquee">
+                        Produk kreatif, kuliner unik, dan layanan lokal di sekitar Universitas Negeri Semarang melalui Mapify.
+                        Temukan dan dukung UMKM lokal melalui peta interaktif yang memudahkanmu menjelajah potensi daerah.
+     </marquee>
+
+   
+
     <!-- Tag Filter Section -->
     <div class="container-fluid bg-success py-3">
         <div class="container">
+            <div class="d-flex justify-content-between align-items-center flex-wrap gap-3">
+
+            <!-- Filter Tags (sebelah kiri) -->
             <div class="d-flex flex-wrap justify-content-center gap-3">
                 <a class="tag-filter" href="#">
                     <i class="bi bi-egg-fried me-2"></i> Makanan
@@ -100,8 +85,25 @@
                     <i class="bi bi-gear me-2"></i> Jasa
                 </a>
             </div>
+
+        <!-- Search Bar (sebelah kanan) -->
+        <div class="flex-grow-1" style="max-width: 800px; margin-top: 4px;">
+            <div class="glass-card">
+                <div class="input-group align-items-center">
+                    <span class="input-group-text">
+                        <i class="bi bi-search"></i>
+                    </span>
+                    <input type="text" class="form-control" placeholder="Cari sesuatu...">
+                    <button class="btn btn-scan" id="btnScan">
+                        <i class="bi bi-camera"></i> Scan
+                    </button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+    </div>
+
 
 
 
@@ -412,7 +414,6 @@
 
 
 
-
     <section id="lokasi" class="py-5">
     <div class="container text-center">
         <div class="lokasi-card p-4 rounded-4 shadow-lg mx-auto">
@@ -429,9 +430,6 @@
 
 
 
-    
-
-
 
 
     <!-- footer -->
@@ -439,40 +437,36 @@
         <div class="cols">
             <div class="about-col">
                 <h3>Mapify</h3>
-                <p>Be Safe Controls Environment</p>
+                <p>Jelajahi Potensi Lokal Bersama Mapify</p>
             </div>
 
             <div class="links-col">
-                <h4>Useful Links</h4>
+                <h4>Halaman</h4>
                 <ul class="navbar-nav ms-auto">
                    <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">Tentang</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">Tentang</a></li>
                     <li class="nav-item"><a class="nav-link" href="blog.html">Berita</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Kontak</a></li>
                 </ul>
             </div>
-            
 
             <div class="links-col">
-                <h4>Social Media</h4>
+                <h4>Media Sosial</h4>
                 <a href="#">Instagram</a>
                 <a href="#">Linkedin</a>
                 <a href="#">Twitter</a>
                 <a href="#">Youtube</a>
-                <a href="#">Github</a>
             </div>
 
             <div class="news-col">
-                <h4>NewsLetter</h4>
-                <p>Enter your email and get notified about news, of.</p>
+                <h4>Berita UMKM</h4>
+                <p>Masukkan Email dan dapatkan notifikasi terbaru</p>
 
                 <form>
-                    <input type="email" placeholder="Your email address">
+                    <input type="email" placeholder="Alamat email anda">
                     <button><i class='bx bxl-telegram'></i></button>
                 </form>
-
             </div>
-
         </div>
     </footer>
 
