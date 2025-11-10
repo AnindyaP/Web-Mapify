@@ -70,18 +70,20 @@
         <div class="container">
             <div class="d-flex justify-content-between align-items-center flex-wrap gap-3">
 
-            <!-- Filter Tags (sebelah kiri) -->
             <div class="d-flex flex-wrap justify-content-center gap-3">
-                <a class="tag-filter" href="#">
+                 <a class="tag-filter" href="#" data-filter="all">
+                    <i class="bi bi-grid me-2"></i> Semua
+                </a>
+                <a class="tag-filter" href="#" data-filter="makanan">
                     <i class="bi bi-egg-fried me-2"></i> Makanan
                 </a>
-                <a class="tag-filter" href="#">
+                <a class="tag-filter" href="#" data-filter="minuman">
                     <i class="bi bi-cup-straw me-2"></i> Minuman
                 </a>
-                <a class="tag-filter" href="#">
+                <a class="tag-filter" href="#" data-filter="budidaya">
                     <i class="bi bi-flower3 me-2"></i> Budidaya
                 </a>
-                <a class="tag-filter" href="#">
+                <a class="tag-filter" href="#" data-filter="jasa">
                     <i class="bi bi-gear me-2"></i> Jasa
                 </a>
             </div>
@@ -93,28 +95,29 @@
                     <span class="input-group-text">
                         <i class="bi bi-search"></i>
                     </span>
-                    <input type="text" class="form-control" placeholder="Cari sesuatu...">
+                    <input
+                    type="text" id="searchBar" class="form-control" placeholder="Cari UMKM berdasarkan nama...">
                     <button class="btn btn-scan" id="btnScan">
                         <i class="bi bi-camera"></i> Scan
                     </button>
                     </div>
+                    <ul id="hasil" class="list-group search-result shadow"></ul>
                 </div>
+            </div>
             </div>
         </div>
     </div>
-    </div>
-
 
 
 
     <!-- Section UMKM 1-->
     <section class="py-5">
     <div class="container">
-        <div class="row g-4 justify-content-center">
+        <div class="row g-4 justify-content-start">
 
         <!-- Card 1 -->
         <div class="col-md-3">
-            <div class="card h-100 shadow umkm-item">
+            <div class="card h-100 shadow umkm-item" data-category="makanan">
             <a href="./detail UMKM/siomay.html" class="card-link text-decoration-none text-dark">
                 <img src="./assets/img/siomay1.jpg" class="card-img-top" alt="Siomay Patemon">
                 <div class="card-body">
@@ -137,11 +140,11 @@
 
         <!-- Card 2 -->
         <div class="col-md-3">
-            <div class="card h-100 shadow umkm-item">
-            <a href="detail-siomay.html" class="card-link text-decoration-none text-dark">
-                <img src="./assets/img/siomay2.jpg" class="card-img-top" alt="Siomay Bandung">
+            <div class="card h-100 shadow umkm-item" data-category="makanan">
+            <a href="./detail UMKM/buah.html" class="card-link text-decoration-none text-dark">
+                <img src="./assets/img/buah.jpg" class="card-img-top" alt="Buah Bu Yati">
                 <div class="card-body">
-                <h6 class="card-title">Siomay Bandung: Gurih Menggoda</h6>
+                <h6 class="card-title">Buah Bu Yati : Buah Segar dan Rujak</h6>
                 <div class="location-card-umkm">
                     <i class="fas fa-map-marker-alt"></i> Semarang Tengah
                 </div>
@@ -160,13 +163,13 @@
 
         <!-- Card 3 -->
         <div class="col-md-3">
-            <div class="card h-100 shadow umkm-item">
-            <a href="detail-siomay.html" class="card-link text-decoration-none text-dark">
-                <img src="./assets/img/siomay3.jpg" class="card-img-top" alt="Siomay Seafood">
+            <div class="card h-100 shadow umkm-item" data-category="budidaya">
+            <a href="./detail UMKM/jamur.html" class="card-link text-decoration-none text-dark">
+                <img src="./assets/img/jamur.jpg" class="card-img-top" alt="Budidaya Jamur">
                 <div class="card-body">
-                <h6 class="card-title">Siomay Seafood: Lezat dan Segar</h6>
+                <h6 class="card-title">Budidaya Jamur Tiram : Usaha Ternak Jamur Tiram </h6>
                 <div class="location-card-umkm">
-                    <i class="fas fa-map-marker-alt"></i> Banyumanik
+                    <i class="fas fa-map-marker-alt"></i> Patemon
                 </div>
                 </div>
             </a>
@@ -183,13 +186,13 @@
 
         <!-- Card 4 -->
         <div class="col-md-3">
-            <div class="card h-100 shadow umkm-item">
-            <a href="detail-siomay.html" class="card-link text-decoration-none text-dark">
-                <img src="./assets/img/siomay4.jpg" class="card-img-top" alt="Siomay Goreng">
+            <div class="card h-100 shadow umkm-item" data-category="makanan">
+            <a href="./detail UMKM/gc.html" class="card-link text-decoration-none text-dark">
+                <img src="./assets/img/gc.jpg" class="card-img-top" alt="Giri Chicken">
                 <div class="card-body">
-                <h6 class="card-title">Siomay Goreng: Renyah di Luar, Lembut di Dalam</h6>
+                <h6 class="card-title">Giri Chicken : Ayam Goreng lezat dan Bergizi</h6>
                 <div class="location-card-umkm">
-                    <i class="fas fa-map-marker-alt"></i> Tembalang
+                    <i class="fas fa-map-marker-alt"></i> Banaran
                 </div>
                 </div>
             </a>
@@ -216,11 +219,11 @@
 
         <!-- Card 1 -->
         <div class="col-md-3">
-            <div class="card h-100 shadow umkm-item">
-            <a href="detail-siomay.html" class="card-link text-decoration-none text-dark">
-                <img src="./assets/img/siomay1.jpg" class="card-img-top" alt="Siomay Patemon">
+            <div class="card h-100 shadow umkm-item" data-category="makanan">
+            <a href="./detail UMKM/tiwul.html" class="card-link text-decoration-none text-dark">
+                <img src="./assets/img/tiwul.jpg" class="card-img-top" alt="Tiwul Patemon">
                 <div class="card-body">
-                <h6 class="card-title">Siomay Patemon: Cita Rasa Legendaris</h6>
+                <h6 class="card-title">Tiwul Patemon : Terbuat dari Singkong Pilihan</h6>
                 <div class="location-card-umkm">
                     <i class="fas fa-map-marker-alt"></i> Patemon
                 </div>
@@ -239,13 +242,13 @@
 
         <!-- Card 2 -->
         <div class="col-md-3">
-            <div class="card h-100 shadow umkm-item">
-            <a href="detail-siomay.html" class="card-link text-decoration-none text-dark">
-                <img src="./assets/img/siomay2.jpg" class="card-img-top" alt="Siomay Bandung">
+            <div class="card h-100 shadow umkm-item" data-category="minuman">
+            <a href="./detail UMKM/degan.html" class="card-link text-decoration-none text-dark">
+                <img src="./assets/img/degan.jpg" class="card-img-top" alt="Es Kelapa">
                 <div class="card-body">
-                <h6 class="card-title">Siomay Bandung: Gurih Menggoda</h6>
+                <h6 class="card-title">Es KlaMud Bu Tri : Kelapa Muda Segar</h6>
                 <div class="location-card-umkm">
-                    <i class="fas fa-map-marker-alt"></i> Semarang Tengah
+                    <i class="fas fa-map-marker-alt"></i> Kalisegoro
                 </div>
                 </div>
             </a>
@@ -262,13 +265,13 @@
 
         <!-- Card 3 -->
         <div class="col-md-3">
-            <div class="card h-100 shadow umkm-item">
-            <a href="detail-siomay.html" class="card-link text-decoration-none text-dark">
-                <img src="./assets/img/siomay3.jpg" class="card-img-top" alt="Siomay Seafood">
+            <div class="card h-100 shadow umkm-item" data-category="jasa">
+            <a href="./detail UMKM/bengkel.html" class="card-link text-decoration-none text-dark">
+                <img src="./assets/img/bengkel.jpg" class="card-img-top" alt="Bengkel">
                 <div class="card-body">
-                <h6 class="card-title">Siomay Seafood: Lezat dan Segar</h6>
+                <h6 class="card-title">Bengkel Sampang : Pilihan Terpercaya Pelanggan</h6>
                 <div class="location-card-umkm">
-                    <i class="fas fa-map-marker-alt"></i> Banyumanik
+                    <i class="fas fa-map-marker-alt"></i> Kalisegoro
                 </div>
                 </div>
             </a>
@@ -285,13 +288,13 @@
 
         <!-- Card 4 -->
         <div class="col-md-3">
-            <div class="card h-100 shadow umkm-item">
-            <a href="detail-siomay.html" class="card-link text-decoration-none text-dark">
-                <img src="./assets/img/siomay4.jpg" class="card-img-top" alt="Siomay Goreng">
+            <div class="card h-100 shadow umkm-item" data-category="makanan">
+            <a href="./detail UMKM/ibune.html" class="card-link text-decoration-none text-dark">
+                <img src="./assets/img/ibune.jpg" class="card-img-top" alt="Warung Makan">
                 <div class="card-body">
-                <h6 class="card-title">Siomay Goreng: Renyah di Luar, Lembut di Dalam</h6>
+                <h6 class="card-title">Warung Makan Ibune Rizky : Menu Khas yang Lezat</h6>
                 <div class="location-card-umkm">
-                    <i class="fas fa-map-marker-alt"></i> Tembalang
+                    <i class="fas fa-map-marker-alt"></i> Taman Siswa
                 </div>
                 </div>
             </a>
@@ -318,13 +321,13 @@
 
         <!-- Card 1 -->
         <div class="col-md-3">
-            <div class="card h-100 shadow umkm-item">
-            <a href="detail-siomay.html" class="card-link text-decoration-none text-dark">
-                <img src="./assets/img/siomay1.jpg" class="card-img-top" alt="Siomay Patemon">
+            <div class="card h-100 shadow umkm-item" data-category="jasa">
+            <a href="./detail UMKM/penjahit.html" class="card-link text-decoration-none text-dark">
+                <img src="./assets/img/penjahit.jpg" class="card-img-top" alt="Penjahit">
                 <div class="card-body">
-                <h6 class="card-title">Siomay Patemon: Cita Rasa Legendaris</h6>
+                <h6 class="card-title">Penjahit Bu Is : Usaha Jahit dan Permak Pakaian</h6>
                 <div class="location-card-umkm">
-                    <i class="fas fa-map-marker-alt"></i> Patemon
+                    <i class="fas fa-map-marker-alt"></i> Taman Siswa
                 </div>
                 </div>
             </a>
@@ -341,13 +344,13 @@
 
         <!-- Card 2 -->
         <div class="col-md-3">
-            <div class="card h-100 shadow umkm-item">
-            <a href="detail-siomay.html" class="card-link text-decoration-none text-dark">
-                <img src="./assets/img/siomay2.jpg" class="card-img-top" alt="Siomay Bandung">
+            <div class="card h-100 shadow umkm-item" data-category="jasa">
+            <a href="./detail UMKM/gas.html" class="card-link text-decoration-none text-dark">
+                <img src="./assets/img/gas.jpg" class="card-img-top" alt="Gas">
                 <div class="card-body">
-                <h6 class="card-title">Siomay Bandung: Gurih Menggoda</h6>
+                <h6 class="card-title">Isi Ulang Gas Portabel : Tersedia Varian Gas Portabel</h6>
                 <div class="location-card-umkm">
-                    <i class="fas fa-map-marker-alt"></i> Semarang Tengah
+                    <i class="fas fa-map-marker-alt"></i> Taman Siswa
                 </div>
                 </div>
             </a>
@@ -364,13 +367,13 @@
 
         <!-- Card 3 -->
         <div class="col-md-3">
-            <div class="card h-100 shadow umkm-item">
-            <a href="detail-siomay.html" class="card-link text-decoration-none text-dark">
-                <img src="./assets/img/siomay3.jpg" class="card-img-top" alt="Siomay Seafood">
+            <div class="card h-100 shadow umkm-item" data-category="makanan">
+            <a href="./detail UMKM/rtm.html" class="card-link text-decoration-none text-dark">
+                <img src="./assets/img/rtm3.jpg" class="card-img-top" alt="Dapur RTM">
                 <div class="card-body">
-                <h6 class="card-title">Siomay Seafood: Lezat dan Segar</h6>
+                <h6 class="card-title">Dapur RTM : Aneka Jajanan Tradisonal</h6>
                 <div class="location-card-umkm">
-                    <i class="fas fa-map-marker-alt"></i> Banyumanik
+                    <i class="fas fa-map-marker-alt"></i> Banaran
                 </div>
                 </div>
             </a>
@@ -387,13 +390,13 @@
 
         <!-- Card 4 -->
         <div class="col-md-3">
-            <div class="card h-100 shadow umkm-item">
-            <a href="detail-siomay.html" class="card-link text-decoration-none text-dark">
-                <img src="./assets/img/siomay4.jpg" class="card-img-top" alt="Siomay Goreng">
+            <div class="card h-100 shadow umkm-item" data-category="makanan">
+            <a href="./detail UMKM/hasilbumi.html" class="card-link text-decoration-none text-dark">
+                <img src="./assets/img/bumi.jpg" class="card-img-top" alt="Hasil Bumi">
                 <div class="card-body">
-                <h6 class="card-title">Siomay Goreng: Renyah di Luar, Lembut di Dalam</h6>
+                <h6 class="card-title">Hasil Bumi : Sayuran segar dan Rempah-Rempah</h6>
                 <div class="location-card-umkm">
-                    <i class="fas fa-map-marker-alt"></i> Tembalang
+                    <i class="fas fa-map-marker-alt"></i> Taman Siswa
                 </div>
                 </div>
             </a>
@@ -410,6 +413,8 @@
 
         </div>
     </div>
+    </section>
+
     </section>
 
 
@@ -482,4 +487,7 @@
 
 </body>
 </html>
+
+
+
 

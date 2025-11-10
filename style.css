@@ -200,6 +200,18 @@
     transform: translateY(-2px);
 }
 
+.tag-filter.active {
+  background: white;
+  color: green;
+  font-weight: bold;
+}
+
+
+.umkm-item {
+  transition: all 0.4s ease;
+}
+
+
 .bi {
     font-size: 1.1rem;
 }
@@ -464,6 +476,284 @@ footer .cols .news-col form button i{
     z-index: 2;
 }
 
+.rtm {
+    background: linear-gradient( #0c952e, #1cdf56);
+    background-image: url('../assets/img/rtm3.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 80vh;
+    position: relative;
+}
+
+.rtm::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(228, 241, 199, 0.6), rgba(147, 202, 28, 0.6)) ;
+    z-index: 1;
+}
+
+.rtm * {
+    position: relative;
+    z-index: 2;
+}
+
+.bengkel {
+    background: linear-gradient( #0c952e, #1cdf56);
+    background-image: url('../assets/img/bengkel.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 80vh;
+    position: relative;
+}
+
+.bengkel::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(228, 241, 199, 0.6), rgba(147, 202, 28, 0.6)) ;
+    z-index: 1;
+}
+
+.bengkel * {
+    position: relative;
+    z-index: 2;
+}
+
+.penjahit {
+    background: linear-gradient( #0c952e, #1cdf56);
+    background-image: url('../assets/img/penjahit.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 80vh;
+    position: relative;
+}
+
+.penjahit::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(228, 241, 199, 0.6), rgba(147, 202, 28, 0.6)) ;
+    z-index: 1;
+}
+
+.penjahit * {
+    position: relative;
+    z-index: 2;
+}
+
+.gas {
+    background: linear-gradient( #0c952e, #1cdf56);
+    background-image: url('../assets/img/gas.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 80vh;
+    position: relative;
+}
+
+.gas::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(228, 241, 199, 0.6), rgba(147, 202, 28, 0.6)) ;
+    z-index: 1;
+}
+
+.gas * {
+    position: relative;
+    z-index: 2;
+}
+
+.gc {
+    background: linear-gradient( #0c952e, #1cdf56);
+    background-image: url('../assets/img/gc.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 80vh;
+    position: relative;
+}
+
+.gc::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(228, 241, 199, 0.6), rgba(147, 202, 28, 0.6)) ;
+    z-index: 1;
+}
+
+.gc * {
+    position: relative;
+    z-index: 2;
+}
+
+.tiwul {
+    background: linear-gradient( #0c952e, #1cdf56);
+    background-image: url('../assets/img/tiwul2.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 80vh;
+    position: relative;
+}
+
+.tiwul::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(228, 241, 199, 0.6), rgba(147, 202, 28, 0.6)) ;
+    z-index: 1;
+}
+
+.tiwul * {
+    position: relative;
+    z-index: 2;
+}
+
+
+.buah {
+    background: linear-gradient( #0c952e, #1cdf56);
+    background-image: url('../assets/img/buah.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 80vh;
+    position: relative;
+}
+
+.buah::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(228, 241, 199, 0.6), rgba(147, 202, 28, 0.6)) ;
+    z-index: 1;
+}
+
+.buah * {
+    position: relative;
+    z-index: 2;
+}
+
+
+.bumi {
+    background: linear-gradient( #0c952e, #1cdf56);
+    background-image: url('../assets/img/bumi2.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 80vh;
+    position: relative;
+}
+
+.bumi::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(228, 241, 199, 0.6), rgba(147, 202, 28, 0.6)) ;
+    z-index: 1;
+}
+
+.bumi * {
+    position: relative;
+    z-index: 2;
+}
+
+
+.jamur {
+    background: linear-gradient( #0c952e, #1cdf56);
+    background-image: url('../Web-Mapify-main/assets/img/jamur2.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 80vh;
+    position: relative;
+}
+
+.jamur::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(228, 241, 199, 0.6), rgba(147, 202, 28, 0.6)) ;
+    z-index: 1;
+}
+
+.jamur * {
+    position: relative;
+    z-index: 2;
+}
+
+
+.degan {
+    background: linear-gradient( #0c952e, #1cdf56);
+    background-image: url('../assets/img/degan2.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 80vh;
+    position: relative;
+}
+
+.degan::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(228, 241, 199, 0.6), rgba(147, 202, 28, 0.6)) ;
+    z-index: 1;
+}
+
+.degan * {
+    position: relative;
+    z-index: 2;
+}
+
+.ibune {
+    background: linear-gradient( #0c952e, #1cdf56);
+    background-image: url('../assets/img/ibune2.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 80vh;
+    position: relative;
+}
+
+.ibune::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(228, 241, 199, 0.6), rgba(147, 202, 28, 0.6)) ;
+    z-index: 1;
+}
+
+.ibune * {
+    position: relative;
+    z-index: 2;
+}
 
 .glass-card {
   margin-top: 4px; 
@@ -531,4 +821,53 @@ footer .cols .news-col form button i{
   text-align: justify;
   text-justify: inter-word; 
   line-height: 1.7;         
+}
+
+
+* Pastikan container hasil search muncul rapi di bawah search bar */
+.glass-card {
+  position: relative !important; 
+  overflow: visible !important;
+}
+
+#hasil {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  background: #ffffff; 
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  margin-top: 5px;
+  max-height: 250px;
+  overflow-y: auto;
+  list-style: none;
+  padding: 0;
+}
+
+/* Item hasil pencarian */
+#hasil .list-group-item {
+  border: none;
+  padding: 10px 15px;
+  font-weight: 500;
+  color: #0f5a21;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+/* Saat hover */
+#hasil .list-group-item:hover {
+  background-color: #e8f5e9;
+}
+
+/* Jika tidak ditemukan */
+#hasil .text-muted {
+  text-align: center;
+  color: #777;
+}
+
+/* Hapus background kuning yang nyangkut */
+body {
+  background-color: #fff !important;
 }
