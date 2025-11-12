@@ -23,7 +23,7 @@
 
 .hero-section {
     background: linear-gradient( #0c952e, #1cdf56);
-    background-image: url('./img/hero1.jpg');
+    background-image: url('./assets/img/hero1.jpg');
     background-size: cover;
     background-position: center;
     min-height: 80vh;
@@ -142,7 +142,7 @@
 
 .hero-section-2{
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://source.unsplash.com/1600x900/?nature,environment');
-    background-image: url('./img/hero3.jpg');
+    background-image: url('./assets/img/hero3.jpg');
     background-size: cover;
     background-position: center;
     min-height: 80vh;
@@ -161,7 +161,7 @@
 
 .hero-section-4{
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://source.unsplash.com/1600x900/?nature,environment');
-    background-image: url('./img/hero4.png');
+    background-image: url('./assets/img/hero4.png');
     background-size: cover;
     background-position: center;
     min-height: 80vh;
@@ -681,7 +681,7 @@ footer .cols .news-col form button i{
 
 .jamur {
     background: linear-gradient( #0c952e, #1cdf56);
-    background-image: url('../Web-Mapify-main/assets/img/jamur2.jpg');
+    background-image: url('../assets/img/jamur2.jpg');
     background-size: cover;
     background-position: center;
     min-height: 80vh;
