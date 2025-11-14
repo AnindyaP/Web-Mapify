@@ -6,13 +6,28 @@
       center: lokasi,
     });
 
-    // Penanda (marker)
     const marker = new google.maps.Marker({
       position: lokasi,
       map: map,
       title: "Siomay Patemon",
     });
   }
+
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('emailForm');
+    const notif = document.getElementById('notif');
+
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        notif.style.display = 'block';
+        form.reset();
+
+        setTimeout(() => {
+            notif.style.display = 'none';
+        }, 3000);
+    });
+});
+
 
 document.addEventListener("DOMContentLoaded", () => {
   const filterButtons = document.querySelectorAll(".tag-filter");
@@ -59,9 +74,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   const model = await mobilenet.load();
   console.log("Model siap digunakan!");
 
-  // ================================
-  // DATASET GAMBAR UMKM UNTUK PENCARIAN FOTO
-  // ================================
+
   const umkmImages = [
     { name: "Siomay Patemon", src: "./assets/img/siomay1.jpg", selector: '.card-img-top[alt="Siomay Patemon"]' },
     { name: "Buah Bu Yati", src: "./assets/img/buah.jpg", selector: '.card-img-top[alt="Buah Bu Yati"]' },
@@ -78,9 +91,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   ];
 
 
-  // ================================
-  // FILTER KATEGORI
-  // ================================
+
   const filterButtons = document.querySelectorAll(".tag-filter");
   const umkmItems = document.querySelectorAll(".umkm-item");
   const searchBar = document.getElementById("searchBar");
@@ -109,9 +120,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   });
 
 
-  // ================================
-  // LIVE SEARCH
-  // ================================
+
   function jalankanPencarian() {
     const keyword = searchBar.value.trim().toLowerCase();
     hasilContainer.innerHTML = "";
@@ -173,9 +182,6 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 
 
-  // ================================
-  // UPLOAD FOTO - SISTEM MENCARI GAMBAR PALING MIRIP
-  // ================================
 
   const btnScan = document.getElementById("btnScan");
   const inputFoto = document.createElement("input");
@@ -227,9 +233,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
   });
 
-  // ================================
-  // FUNGSI MEMUAT GAMBAR
-  // ================================
+
   function loadImage(src) {
     return new Promise((resolve) => {
       const img = new Image();
@@ -239,9 +243,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
   }
 
-  // ================================
-  // HISTOGRAM GAMBAR
-  // ================================
+
   function getImageHistogram(img) {
     const canvas = document.createElement("canvas");
     const ctx = canvas.getContext("2d");
@@ -262,9 +264,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     return hist;
   }
 
-  // ================================
-  // PERBANDINGAN HISTOGRAM
-  // ================================
+
   function compareHist(h1, h2) {
     return Math.sqrt(
       (h1[0] - h2[0]) ** 2 +
@@ -283,7 +283,6 @@ const commentForm = document.getElementById("commentForm");
 
   let comments = [];
 
-  // Render Komentar
   function renderComments() {
     commentList.innerHTML = "";
 
@@ -328,7 +327,7 @@ const commentForm = document.getElementById("commentForm");
     attachReplyEvents();
   }
 
-  // Event: Tambah Komentar
+  
   commentForm.addEventListener("submit", function (e) {
     e.preventDefault();
 
@@ -341,7 +340,7 @@ const commentForm = document.getElementById("commentForm");
     commentForm.reset();
   });
 
-  // Attach Event Button Balas
+ 
   function attachReplyEvents() {
     const replyButtons = document.querySelectorAll(".reply-btn");
     const submitReplyButtons = document.querySelectorAll(".submit-reply");
@@ -372,7 +371,6 @@ const commentForm = document.getElementById("commentForm");
       });
     });
   }
-
 
 
 
