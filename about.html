@@ -13,7 +13,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-gradient-dark fixed-top">
         <div class="container">
             <a class="navbar-brand" href="index.html">
-                <img src="./img/logo-mapify.png" alt="Mapify" height="45">
+                <img src="assets/img/logo.png" alt="Mapify" height="45">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -50,36 +50,52 @@
 
     <!-- About Section -->
     <section class="py-5">
-        <div class="container">
-            <div class="row align-items-start"> <!-- ubah dari align-items-center ke start -->
-            <div class="col-lg-6 mb-4 d-flex align-items-start"> <!-- tambah d-flex -->
-                <img src="./img/tentang.jpg" alt="About Image" class="img-fluid rounded-3 shadow about-img">
+    <div class="container">
+
+        <!-- Baris 1: Foto kiri + Judul kanan -->
+        <div class="row align-items-start mb-4">
+            <div class="col-lg-6">
+                <img src="assets/img/tentang.jpg" alt="About Image" 
+                     class="img-fluid rounded-3 shadow about-img">
             </div>
-            <div class="about-us col-lg-6">
-                <h2 class="fw-bold">Ketahui Tentang Mapify</h2>
-                <p class="mb-4">
-                Mapify merupakan platform digital berbasis peta interaktif yang dirancang untuk membantu Usaha Mikro, Kecil, dan Menengah (UMKM) lokal agar lebih mudah ditemukan oleh masyarakat. Melalui integrasi sistem informasi geografis (SIG), Mapify menampilkan lokasi UMKM yang sebelumnya belum terdaftar di peta digital, serta menyediakan berbagai fitur inovatif untuk memperluas jangkauan promosi dan meningkatkan interaksi dengan konsumen.
-                Di Mapify, setiap UMKM memiliki profil digital yang menampilkan informasi lengkap mengenai usaha, mulai dari deskripsi, produk, kontak, hingga lokasi. Pengguna juga dapat memberikan penilaian dan ulasan (fitur Like, Dislike, dan Review), mencari usaha menggunakan fitur scan kamera, atau menelusuri kategori tertentu seperti makanan, minuman, dan jasa melalui filter kategori.
-                Dengan adanya fitur rute yang terhubung langsung ke Google Maps, pengguna dapat dengan mudah menavigasi lokasi UMKM yang diinginkan. Mapify hadir sebagai wadah kolaboratif antara pelaku UMKM dan masyarakat, dengan tujuan membangun ekosistem bisnis lokal yang kuat, mudah diakses, dan saling mendukung.
+            <div class="col-lg-6 d-flex flex-column align-items-start text-justify">
+                <h1 class="fw-bold m-0">Apa itu Mapify?</h1>
+                <br>
+                <h4 class="">Mapping and Promotion for Gunungpati UMKM Visibility atau Mapify merupakan platform digital berbasis peta interaktif yang dirancang untuk membantu Usaha Mikro, Kecil, dan Menengah (UMKM) lokal, khususnya wilayah Gunungpati agar lebih mudah ditemukan oleh masyarakat. </h4>
+            </div>
+        </div>
+
+        <!-- Baris 2: Deskripsi full width -->
+        <div class="row">
+            <div class="col-12">
+                <p class="mb-4 text-justify">
+                   Melalui integrasi sistem informasi geografis (SIG), Mapify menampilkan lokasi UMKM yang sebelumnya belum terdaftar di peta digital, serta menyediakan berbagai fitur inovatif untuk memperluas jangkauan promosi dan meningkatkan interaksi dengan konsumen.
+                    Di Mapify, setiap UMKM memiliki profil digital yang menampilkan informasi lengkap mengenai usaha, mulai dari deskripsi, produk, kontak, hingga lokasi. Pengguna juga dapat memberikan penilaian dan ulasan (fitur Like, Dislike, dan Review), mencari usaha menggunakan fitur scan kamera, atau menelusuri kategori tertentu seperti makanan, minuman, dan jasa melalui filter kategori.
+                    Dengan adanya fitur rute yang terhubung langsung ke Google Maps, pengguna dapat dengan mudah menavigasi lokasi UMKM yang diinginkan. Mapify hadir sebagai wadah kolaboratif antara pelaku UMKM dan masyarakat, dengan tujuan membangun ekosistem bisnis lokal yang kuat, mudah diakses, dan saling mendukung.
                 </p>
 
                 <ul>
-                <li><strong>Visi :</strong> Menjadi platform digital pemetaan UMKM terdepan di Indonesia yang membantu pelaku usaha lokal agar lebih dikenal, lebih mudah dijangkau, dan lebih berdaya saing di era digital.</li>
-                <li><strong>Misi :</strong>
-                    <ol>
-                    <li>Memetakan persebaran UMKM lokal melalui sistem informasi geografis yang interaktif dan informatif.</li>
-                    <li>Menghubungkan pelaku usaha dengan masyarakat melalui fitur pencarian, ulasan, dan promosi digital.</li>
-                    <li>Meningkatkan visibilitas UMKM yang belum terdaftar di peta digital seperti Google Maps.</li>
-                    <li>Mendorong digitalisasi UMKM dengan menyediakan profil usaha online yang menarik dan mudah diakses.</li>
-                    <li>Menumbuhkan dukungan lokal dengan memungkinkan pengguna menemukan dan menandai UMKM favorit mereka.</li>
-                    </ol>
-                </li>
+                    <li><strong>Visi Mapify:</strong> <br>
+                        Menjadi platform digital pemetaan UMKM terdepan yang membantu pelaku usaha lokal agar lebih dikenal, lebih mudah dijangkau, dan lebih berdaya saing di era digital.
+                    </li>
+                    
+                    <br>
+
+                    <li><strong>Misi Mapify:</strong>
+                        <ol>
+                            <li>Memetakan persebaran UMKM lokal melalui sistem informasi geografis yang interaktif dan informatif.</li>
+                            <li>Menghubungkan pelaku usaha dengan masyarakat melalui fitur pencarian, ulasan, dan promosi digital.</li>
+                            <li>Meningkatkan visibilitas UMKM yang belum terdaftar di peta digital seperti Google Maps.</li>
+                            <li>Mendorong digitalisasi UMKM dengan menyediakan profil usaha online yang menarik dan mudah diakses.</li>
+                            <li>Menumbuhkan dukungan lokal dengan memungkinkan pengguna menemukan dan menandai UMKM favorit mereka.</li>
+                        </ol>
+                    </li>
                 </ul>
             </div>
-            </div>
         </div>
-    </section>
 
+    </div>
+</section>
 
     <!-- footer -->
     <footer>

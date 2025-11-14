@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Warung Makan Ibune Risky</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="../style.css">
 </head>
@@ -13,7 +14,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-gradient-dark fixed-top">
         <div class="container">
             <a class="navbar-brand" href="../index.html">
-                <img src="../img/logo-mapify.png" alt="Mapify" height="45">
+                <img src="../assets/img/logo.png" alt="Mapify" height="45">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -58,11 +59,26 @@
                 <div class="about-us col-lg-6">
                     <h2 class="fw-bold">Profile UMKM </h2>
                     <p class="mb-4">WM Ibune Rizky merupakan usaha rumahan yang telah berdiri selama 2 tahun di bidang makanan, menyajikan aneka hidangan rumahan dengan cita rasa autentik dan harga yang terjangkau. Setiap menu disiapkan dengan bahan segar serta bumbu khas yang menggugah selera, menghadirkan suasana makan yang hangat dan akrab seperti di rumah sendiri. Dengan pelayanan ramah dan pilihan menu yang beragam, WM Ibune Rizky menjadi tempat favorit bagi pelanggan yang mencari masakan lezat dan nyaman untuk dinikmati setiap hari.</p> 
-                    <ul>
-                        <li><strong>Nama Pemilik        :</strong> Pak Bambang</li>
-                        <li><strong>Informasi pemesanan :</strong> +62 834-7532-9732</li>
-                        <li><strong>Lokasi              :</strong> Gang Bima, Banaran Nomor 9  </li>
+                    
+                    <ul class="no-bullet">
+                    <i class="bi bi-person-fill me-2"></i>
+                        <strong>Nama Pemilik :</strong> Pak Bambang
                     </ul>
+                
+                    <ul>
+                      <i class="bi bi-whatsapp me-2 text-success"></i>
+                      <strong>Informasi pemesanan :</strong>
+                      <a href="https://wa.me/6281338337293" target="_blank" rel="noopener noreferrer">
+                        +62 813-3833-7293
+                      </a>
+                    </ul>
+
+                    <ul>
+                      <i class="bi bi-geo-alt-fill me-2 text-danger"></i>
+                      <strong>Lokasi :</strong> Gg. Bima No.7 Sekaran, Kec. Gn. Pati, Kota Semarang, Jawa Tengah 50229
+                    </ul>
+                  </ul>
+
                 </div>
             </div>
         </div>
@@ -215,18 +231,20 @@
 </section>
 
 
-    <section id="lokasi" class="py-5">
+      <section id="lokasi" class="py-5">
         <div class="container text-center">
-            <div class="lokasi-card p-4 rounded-4 shadow-lg mx-auto">
+          <div class="lokasi-card p-4 rounded-4 shadow-lg mx-auto" style="background-color: #2c3e50;">
             <h1 class="mb-4 text-white fw-bold">Temukan Lokasi UMKM</h1>
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d247.4739036193871!2d110.3971421859594!3d-7.058247753323418!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e708968a9b5ccc3%3A0x5027a76e356e080!2sPatemon%2C%20Kec.%20Gn.%20Pati%2C%20Kota%20Semarang%2C%20Jawa%20Tengah!5e0!3m2!1sid!2sid!4v1761825104240!5m2!1sid!2sid"
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
+            <iframe 
+              src="https://www.google.com/maps?q=-7.043450,110.392297&hl=id&z=17&output=embed"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
         </div>
-    </section>
+      </section>
+
 
 
 
@@ -270,5 +288,6 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

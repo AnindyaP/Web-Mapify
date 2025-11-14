@@ -9,7 +9,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
-
+    <script src="https://cdn.jsdelivr.net/npm/tesseract.js@4/dist/tesseract.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.21.0/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
 </head>
 
 <body> 
@@ -17,7 +20,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-gradient-dark fixed-top">
         <div class="container">
             <a class="navbar-brand" href="index.html">
-                <img src="./img/logo-mapify.png" alt="Mapify" height="45">
+                <img src="assets/img/logo.png" alt="Mapify" height="45">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -46,17 +49,75 @@
     </script>
 
     <!-- Hero Section -->
-    <section class="hero-section d-flex align-items-center text-white">
-        <div class="container">
-            <div class="row">
-                <div class= "container text-center">
-                    <h1 class="display-4 fw-bold">Selamat Datang</h1>
-                    <h2>Jelajahi Potensi Lokal Bersama Mapify</h2>
-                </div>
-              </div>
-            </div>
+   <section class="hero-section position-relative">
+
+  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+
+    <!-- Indicator -->
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
+        class="active" aria-current="true" aria-label="Slide 1"></button>
+
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+    </div>
+
+    <!-- Slide images -->
+    <div class="carousel-inner">
+
+      <!-- Slide 1 -->
+      <div class="carousel-item active">
+        <a href="index.html">
+          <img src="assets/img/lokasi.jpg" class="d-block w-100 hero-img" alt="Slide 1">
+        </a>
+        <div class="carousel-caption d-none d-md-block">
+          <h5 class="fw-bold">Selamat Datang</h5>
+          <p>Jelajahi Potensi Lokal Bersama Mapify</p>
         </div>
-    </section>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="carousel-item">
+        <a href="blog.html">
+          <img src="assets/img/berita.jpg" class="d-block w-100 hero-img" alt="Slide 2">
+        </a>
+        <div class="carousel-caption d-none d-md-block">
+          <h5 class="fw-bold">Berita Terkini</h5>
+          <p>Informasi UMKM Gunungpati Terupdate</p>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="carousel-item">
+        <a href="contact.html">
+          <img src="assets/img/hubungi.jpg" class="d-block w-100 hero-img" alt="Slide 3">
+        </a>
+        <div class="carousel-caption d-none d-md-block">
+          <h5 class="fw-bold">Ingin Mendaftarkan UMKM Anda?</h5>
+          <p>Hubungi Kontak Kami</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Prev / Next -->
+    <button class="carousel-control-prev" type="button"
+      data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+
+    <button class="carousel-control-next" type="button"
+      data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+
+  </div>
+
+</section>
+
 
      <marquee behavior="scroll" direction="left" scrollamount="6" class="text-marquee">
                         Produk kreatif, kuliner unik, dan layanan lokal di sekitar Universitas Negeri Semarang melalui Mapify.
@@ -95,8 +156,8 @@
                     <span class="input-group-text">
                         <i class="bi bi-search"></i>
                     </span>
-                    <input
-                    type="text" id="searchBar" class="form-control" placeholder="Cari UMKM berdasarkan nama...">
+                    <input type="text" id="searchBar" class="form-control" placeholder="Cari UMKM berdasarkan nama...">
+
                     <button class="btn btn-scan" id="btnScan">
                         <i class="bi bi-camera"></i> Upload Foto
                     </button>
@@ -108,334 +169,311 @@
         </div>
     </div>
 
+    <input type="file" id="inputFoto" accept="image/*" style="display:none">
 
 
-    <!-- Section UMKM 1-->
-    <section class="py-5">
-    <div class="container">
-        <div class="row g-4 justify-content-start">
+<!-- Section UMKM (Sudah Digabung Jadi Satu) -->
+<section class="py-5">
+  <div class="container">
+    <div class="row g-4 justify-content-start">
 
-        <!-- Card 1 -->
-        <div class="col-md-3">
-            <div class="card h-100 shadow umkm-item" data-category="makanan">
-            <a href="./detail UMKM/siomay.html" class="card-link text-decoration-none text-dark">
-                <img src="./assets/img/siomay1.jpg" class="card-img-top" alt="Siomay Patemon">
-                <div class="card-body">
-                <h6 class="card-title">Siomay Patemon: Cita Rasa Legendaris</h6>
-                <div class="location-card-umkm">
-                    <i class="fas fa-map-marker-alt"></i> Patemon
-                </div>
-                </div>
-            </a>
-            <div class="reaction d-flex justify-content-between align-items-center p-3">
-                <div>
-                <i class="bi bi-hand-thumbs-up like-btn"></i>
-                <span class="like-count">0</span>
-                <i class="bi bi-hand-thumbs-down dislike-btn ms-3"></i>
-                <span class="dislike-count">0</span>
-                </div>
+      <!-- CARD 1 -->
+      <div class="col-md-3 umkm-item" data-category="makanan">
+        <div class="card h-100 shadow">
+          <a href="./detail UMKM/siomay.html" class="card-link text-decoration-none text-dark">
+            <img src="./assets/img/siomay1.jpg" class="card-img-top" alt="Siomay Patemon">
+            <div class="card-body">
+              <h6 class="card-title">Siomay Patemon: Cita Rasa Legendaris</h6>
+              <div class="location-card-umkm">
+                <i class="fas fa-map-marker-alt"></i> Patemon
+              </div>
             </div>
+          </a>
+
+          <div class="reaction d-flex justify-content-between align-items-center p-3">
+            <div>
+              <i class="bi bi-hand-thumbs-up like-btn"></i>
+              <span class="like-count">0</span>
+              <i class="bi bi-hand-thumbs-down dislike-btn ms-3"></i>
+              <span class="dislike-count">0</span>
             </div>
+          </div>
         </div>
+      </div>
 
-        <!-- Card 2 -->
-        <div class="col-md-3">
-            <div class="card h-100 shadow umkm-item" data-category="makanan">
-            <a href="./detail UMKM/buah.html" class="card-link text-decoration-none text-dark">
-                <img src="./assets/img/buah.jpg" class="card-img-top" alt="Buah Bu Yati">
-                <div class="card-body">
-                <h6 class="card-title">Buah Bu Yati : Buah Segar dan Rujak</h6>
-                <div class="location-card-umkm">
-                    <i class="fas fa-map-marker-alt"></i> Semarang Tengah
-                </div>
-                </div>
-            </a>
-            <div class="reaction d-flex justify-content-between align-items-center p-3">
-                <div>
-                <i class="bi bi-hand-thumbs-up like-btn"></i>
-                <span class="like-count">0</span>
-                <i class="bi bi-hand-thumbs-down dislike-btn ms-3"></i>
-                <span class="dislike-count">0</span>
-                </div>
+      <!-- CARD 2 -->
+      <div class="col-md-3 umkm-item" data-category="makanan">
+        <div class="card h-100 shadow">
+          <a href="./detail UMKM/buah.html" class="card-link text-decoration-none text-dark">
+            <img src="./assets/img/buah.jpg" class="card-img-top" alt="Buah Bu Yati">
+            <div class="card-body">
+              <h6 class="card-title">Buah Bu Yati : Buah Segar dan Rujak</h6>
+              <div class="location-card-umkm">
+                <i class="fas fa-map-marker-alt"></i> Semarang Tengah
+              </div>
             </div>
-            </div>
-        </div>
+          </a>
 
-        <!-- Card 3 -->
-        <div class="col-md-3">
-            <div class="card h-100 shadow umkm-item" data-category="budidaya">
-            <a href="./detail UMKM/jamur.html" class="card-link text-decoration-none text-dark">
-                <img src="./assets/img/jamur.jpg" class="card-img-top" alt="Budidaya Jamur">
-                <div class="card-body">
-                <h6 class="card-title">Budidaya Jamur Tiram : Usaha Ternak Jamur Tiram </h6>
-                <div class="location-card-umkm">
-                    <i class="fas fa-map-marker-alt"></i> Patemon
-                </div>
-                </div>
-            </a>
-            <div class="reaction d-flex justify-content-between align-items-center p-3">
-                <div>
-                <i class="bi bi-hand-thumbs-up like-btn"></i>
-                <span class="like-count">0</span>
-                <i class="bi bi-hand-thumbs-down dislike-btn ms-3"></i>
-                <span class="dislike-count">0</span>
-                </div>
+          <div class="reaction d-flex justify-content-between align-items-center p-3">
+            <div>
+              <i class="bi bi-hand-thumbs-up like-btn"></i>
+              <span class="like-count">0</span>
+              <i class="bi bi-hand-thumbs-down dislike-btn ms-3"></i>
+              <span class="dislike-count">0</span>
             </div>
-            </div>
+          </div>
         </div>
+      </div>
 
-        <!-- Card 4 -->
-        <div class="col-md-3">
-            <div class="card h-100 shadow umkm-item" data-category="makanan">
-            <a href="./detail UMKM/gc.html" class="card-link text-decoration-none text-dark">
-                <img src="./assets/img/gc.jpg" class="card-img-top" alt="Giri Chicken">
-                <div class="card-body">
-                <h6 class="card-title">Giri Chicken : Ayam Goreng lezat dan Bergizi</h6>
-                <div class="location-card-umkm">
-                    <i class="fas fa-map-marker-alt"></i> Banaran
-                </div>
-                </div>
-            </a>
-            <div class="reaction d-flex justify-content-between align-items-center p-3">
-                <div>
-                <i class="bi bi-hand-thumbs-up like-btn"></i>
-                <span class="like-count">0</span>
-                <i class="bi bi-hand-thumbs-down dislike-btn ms-3"></i>
-                <span class="dislike-count">0</span>
-                </div>
+      <!-- CARD 3 -->
+      <div class="col-md-3 umkm-item" data-category="budidaya">
+        <div class="card h-100 shadow">
+          <a href="./detail UMKM/jamur.html" class="card-link text-decoration-none text-dark">
+            <img src="./assets/img/jamur.jpg" class="card-img-top" alt="Budidaya Jamur">
+            <div class="card-body">
+              <h6 class="card-title">Budidaya Jamur Tiram : Usaha Ternak Jamur Tiram</h6>
+              <div class="location-card-umkm">
+                <i class="fas fa-map-marker-alt"></i> Patemon
+              </div>
             </div>
-            </div>
-        </div>
+          </a>
 
+          <div class="reaction d-flex justify-content-between align-items-center p-3">
+            <div>
+              <i class="bi bi-hand-thumbs-up like-btn"></i>
+              <span class="like-count">0</span>
+              <i class="bi bi-hand-thumbs-down dislike-btn ms-3"></i>
+              <span class="dislike-count">0</span>
+            </div>
+          </div>
         </div>
+      </div>
+
+      <!-- CARD 4 -->
+      <div class="col-md-3 umkm-item" data-category="makanan">
+        <div class="card h-100 shadow">
+          <a href="./detail UMKM/gc.html" class="card-link text-decoration-none text-dark">
+            <img src="./assets/img/gc.jpg" class="card-img-top" alt="Giri Chicken">
+            <div class="card-body">
+              <h6 class="card-title">Giri Chicken : Ayam Goreng Lezat dan Bergizi</h6>
+              <div class="location-card-umkm">
+                <i class="fas fa-map-marker-alt"></i> Banaran
+              </div>
+            </div>
+          </a>
+
+          <div class="reaction d-flex justify-content-between align-items-center p-3">
+            <div>
+              <i class="bi bi-hand-thumbs-up like-btn"></i>
+              <span class="like-count">0</span>
+              <i class="bi bi-hand-thumbs-down dislike-btn ms-3"></i>
+              <span class="dislike-count">0</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 5 -->
+      <div class="col-md-3 umkm-item" data-category="makanan">
+        <div class="card h-100 shadow">
+          <a href="./detail UMKM/tiwul.html" class="card-link text-decoration-none text-dark">
+            <img src="./assets/img/tiwul.jpg" class="card-img-top" alt="Tiwul Patemon">
+            <div class="card-body">
+              <h6 class="card-title">Tiwul Patemon : Terbuat dari Singkong Pilihan</h6>
+              <div class="location-card-umkm">
+                <i class="fas fa-map-marker-alt"></i> Patemon
+              </div>
+            </div>
+          </a>
+
+          <div class="reaction d-flex justify-content-between align-items-center p-3">
+            <div>
+              <i class="bi bi-hand-thumbs-up like-btn"></i>
+              <span class="like-count">0</span>
+              <i class="bi bi-hand-thumbs-down dislike-btn ms-3"></i>
+              <span class="dislike-count">0</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 6 -->
+      <div class="col-md-3 umkm-item" data-category="minuman">
+        <div class="card h-100 shadow">
+          <a href="./detail UMKM/degan.html" class="card-link text-decoration-none text-dark">
+            <img src="./assets/img/degan.jpg" class="card-img-top" alt="Es Kelapa">
+            <div class="card-body">
+              <h6 class="card-title">Es KlaMud Bu Tri : Kelapa Muda Segar</h6>
+              <div class="location-card-umkm">
+                <i class="fas fa-map-marker-alt"></i> Kalisegoro
+              </div>
+            </div>
+          </a>
+
+          <div class="reaction d-flex justify-content-between align-items-center p-3">
+            <div>
+              <i class="bi bi-hand-thumbs-up like-btn"></i>
+              <span class="like-count">0</span>
+              <i class="bi bi-hand-thumbs-down dislike-btn ms-3"></i>
+              <span class="dislike-count">0</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 7 -->
+      <div class="col-md-3 umkm-item" data-category="jasa">
+        <div class="card h-100 shadow">
+          <a href="./detail UMKM/bengkel.html" class="card-link text-decoration-none text-dark">
+            <img src="./assets/img/bengkel.jpg" class="card-img-top" alt="Bengkel">
+            <div class="card-body">
+              <h6 class="card-title">Bengkel Sampang : Pilihan Terpercaya Pelanggan</h6>
+              <div class="location-card-umkm">
+                <i class="fas fa-map-marker-alt"></i> Kalisegoro
+              </div>
+            </div>
+          </a>
+
+          <div class="reaction d-flex justify-content-between align-items-center p-3">
+            <div>
+              <i class="bi bi-hand-thumbs-up like-btn"></i>
+              <span class="like-count">0</span>
+              <i class="bi bi-hand-thumbs-down dislike-btn ms-3"></i>
+              <span class="dislike-count">0</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 8 -->
+      <div class="col-md-3 umkm-item" data-category="makanan">
+        <div class="card h-100 shadow">
+          <a href="./detail UMKM/ibune.html" class="card-link text-decoration-none text-dark">
+            <img src="./assets/img/ibune.jpg" class="card-img-top" alt="Warung Makan">
+            <div class="card-body">
+              <h6 class="card-title">Warung Makan Ibune Rizky : Menu Khas yang Lezat</h6>
+              <div class="location-card-umkm">
+                <i class="fas fa-map-marker-alt"></i> Taman Siswa
+              </div>
+            </div>
+          </a>
+
+          <div class="reaction d-flex justify-content-between align-items-center p-3">
+            <div>
+              <i class="bi bi-hand-thumbs-up like-btn"></i>
+              <span class="like-count">0</span>
+              <i class="bi bi-hand-thumbs-down dislike-btn ms-3"></i>
+              <span class="dislike-count">0</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 9 -->
+      <div class="col-md-3 umkm-item" data-category="jasa">
+        <div class="card h-100 shadow">
+          <a href="./detail UMKM/penjahit.html" class="card-link text-decoration-none text-dark">
+            <img src="./assets/img/penjahit.jpg" class="card-img-top" alt="Penjahit">
+            <div class="card-body">
+              <h6 class="card-title">Penjahit Bu Is : Usaha Jahit dan Permak Pakaian</h6>
+              <div class="location-card-umkm">
+                <i class="fas fa-map-marker-alt"></i> Taman Siswa
+              </div>
+            </div>
+          </a>
+
+          <div class="reaction d-flex justify-content-between align-items-center p-3">
+            <div>
+              <i class="bi bi-hand-thumbs-up like-btn"></i>
+              <span class="like-count">0</span>
+              <i class="bi bi-hand-thumbs-down dislike-btn ms-3"></i>
+              <span class="dislike-count">0</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 10 -->
+      <div class="col-md-3 umkm-item" data-category="jasa">
+        <div class="card h-100 shadow">
+          <a href="./detail UMKM/gas.html" class="card-link text-decoration-none text-dark">
+            <img src="./assets/img/gas.jpg" class="card-img-top" alt="Gas">
+            <div class="card-body">
+              <h6 class="card-title">Isi Ulang Gas Portabel : Tersedia Varian Gas Portabel</h6>
+              <div class="location-card-umkm">
+                <i class="fas fa-map-marker-alt"></i> Taman Siswa
+              </div>
+            </div>
+          </a>
+
+          <div class="reaction d-flex justify-content-between align-items-center p-3">
+            <div>
+              <i class="bi bi-hand-thumbs-up like-btn"></i>
+              <span class="like-count">0</span>
+              <i class="bi bi-hand-thumbs-down dislike-btn ms-3"></i>
+              <span class="dislike-count">0</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 11 -->
+      <div class="col-md-3 umkm-item" data-category="makanan">
+        <div class="card h-100 shadow">
+          <a href="./detail UMKM/rtm.html" class="card-link text-decoration-none text-dark">
+            <img src="./assets/img/rtm3.jpg" class="card-img-top" alt="Dapur RTM">
+            <div class="card-body">
+              <h6 class="card-title">Dapur RTM : Aneka Jajanan Tradisional</h6>
+              <div class="location-card-umkm">
+                <i class="fas fa-map-marker-alt"></i> Banaran
+              </div>
+            </div>
+          </a>
+
+          <div class="reaction d-flex justify-content-between align-items-center p-3">
+            <div>
+              <i class="bi bi-hand-thumbs-up like-btn"></i>
+              <span class="like-count">0</span>
+              <i class="bi bi-hand-thumbs-down dislike-btn ms-3"></i>
+              <span class="dislike-count">0</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 12 -->
+      <div class="col-md-3 umkm-item" data-category="makanan">
+        <div class="card h-100 shadow">
+          <a href="./detail UMKM/hasilbumi.html" class="card-link text-decoration-none text-dark">
+            <img src="./assets/img/bumi.jpg" class="card-img-top" alt="Hasil Bumi">
+            <div class="card-body">
+              <h6 class="card-title">Hasil Bumi : Sayuran Segar dan Rempah-Rempah</h6>
+              <div class="location-card-umkm">
+                <i class="fas fa-map-marker-alt"></i> Taman Siswa
+              </div>
+            </div>
+          </a>
+
+          <div class="reaction d-flex justify-content-between align-items-center p-3">
+            <div>
+              <i class="bi bi-hand-thumbs-up like-btn"></i>
+              <span class="like-count">0</span>
+              <i class="bi bi-hand-thumbs-down dislike-btn ms-3"></i>
+              <span class="dislike-count">0</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
-    </section>
-
-
-    <!-- Section UMKM 2-->
-    <section class="py-5">
-    <div class="container">
-        <div class="row g-4 justify-content-center">
-
-        <!-- Card 1 -->
-        <div class="col-md-3">
-            <div class="card h-100 shadow umkm-item" data-category="makanan">
-            <a href="./detail UMKM/tiwul.html" class="card-link text-decoration-none text-dark">
-                <img src="./assets/img/tiwul.jpg" class="card-img-top" alt="Tiwul Patemon">
-                <div class="card-body">
-                <h6 class="card-title">Tiwul Patemon : Terbuat dari Singkong Pilihan</h6>
-                <div class="location-card-umkm">
-                    <i class="fas fa-map-marker-alt"></i> Patemon
-                </div>
-                </div>
-            </a>
-            <div class="reaction d-flex justify-content-between align-items-center p-3">
-                <div>
-                <i class="bi bi-hand-thumbs-up like-btn"></i>
-                <span class="like-count">0</span>
-                <i class="bi bi-hand-thumbs-down dislike-btn ms-3"></i>
-                <span class="dislike-count">0</span>
-                </div>
-            </div>
-            </div>
-        </div>
-
-        <!-- Card 2 -->
-        <div class="col-md-3">
-            <div class="card h-100 shadow umkm-item" data-category="minuman">
-            <a href="./detail UMKM/degan.html" class="card-link text-decoration-none text-dark">
-                <img src="./assets/img/degan.jpg" class="card-img-top" alt="Es Kelapa">
-                <div class="card-body">
-                <h6 class="card-title">Es KlaMud Bu Tri : Kelapa Muda Segar</h6>
-                <div class="location-card-umkm">
-                    <i class="fas fa-map-marker-alt"></i> Kalisegoro
-                </div>
-                </div>
-            </a>
-            <div class="reaction d-flex justify-content-between align-items-center p-3">
-                <div>
-                <i class="bi bi-hand-thumbs-up like-btn"></i>
-                <span class="like-count">0</span>
-                <i class="bi bi-hand-thumbs-down dislike-btn ms-3"></i>
-                <span class="dislike-count">0</span>
-                </div>
-            </div>
-            </div>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="col-md-3">
-            <div class="card h-100 shadow umkm-item" data-category="jasa">
-            <a href="./detail UMKM/bengkel.html" class="card-link text-decoration-none text-dark">
-                <img src="./assets/img/bengkel.jpg" class="card-img-top" alt="Bengkel">
-                <div class="card-body">
-                <h6 class="card-title">Bengkel Sampang : Pilihan Terpercaya Pelanggan</h6>
-                <div class="location-card-umkm">
-                    <i class="fas fa-map-marker-alt"></i> Kalisegoro
-                </div>
-                </div>
-            </a>
-            <div class="reaction d-flex justify-content-between align-items-center p-3">
-                <div>
-                <i class="bi bi-hand-thumbs-up like-btn"></i>
-                <span class="like-count">0</span>
-                <i class="bi bi-hand-thumbs-down dislike-btn ms-3"></i>
-                <span class="dislike-count">0</span>
-                </div>
-            </div>
-            </div>
-        </div>
-
-        <!-- Card 4 -->
-        <div class="col-md-3">
-            <div class="card h-100 shadow umkm-item" data-category="makanan">
-            <a href="./detail UMKM/ibune.html" class="card-link text-decoration-none text-dark">
-                <img src="./assets/img/ibune.jpg" class="card-img-top" alt="Warung Makan">
-                <div class="card-body">
-                <h6 class="card-title">Warung Makan Ibune Rizky : Menu Khas yang Lezat</h6>
-                <div class="location-card-umkm">
-                    <i class="fas fa-map-marker-alt"></i> Taman Siswa
-                </div>
-                </div>
-            </a>
-            <div class="reaction d-flex justify-content-between align-items-center p-3">
-                <div>
-                <i class="bi bi-hand-thumbs-up like-btn"></i>
-                <span class="like-count">0</span>
-                <i class="bi bi-hand-thumbs-down dislike-btn ms-3"></i>
-                <span class="dislike-count">0</span>
-                </div>
-            </div>
-            </div>
-        </div>
-
-        </div>
-    </div>
-    </section>
-
-
-      <!-- Section UMKM 3-->
-    <section class="py-5">
-    <div class="container">
-        <div class="row g-4 justify-content-center">
-
-        <!-- Card 1 -->
-        <div class="col-md-3">
-            <div class="card h-100 shadow umkm-item" data-category="jasa">
-            <a href="./detail UMKM/penjahit.html" class="card-link text-decoration-none text-dark">
-                <img src="./assets/img/penjahit.jpg" class="card-img-top" alt="Penjahit">
-                <div class="card-body">
-                <h6 class="card-title">Penjahit Bu Is : Usaha Jahit dan Permak Pakaian</h6>
-                <div class="location-card-umkm">
-                    <i class="fas fa-map-marker-alt"></i> Taman Siswa
-                </div>
-                </div>
-            </a>
-            <div class="reaction d-flex justify-content-between align-items-center p-3">
-                <div>
-                <i class="bi bi-hand-thumbs-up like-btn"></i>
-                <span class="like-count">0</span>
-                <i class="bi bi-hand-thumbs-down dislike-btn ms-3"></i>
-                <span class="dislike-count">0</span>
-                </div>
-            </div>
-            </div>
-        </div>
-
-        <!-- Card 2 -->
-        <div class="col-md-3">
-            <div class="card h-100 shadow umkm-item" data-category="jasa">
-            <a href="./detail UMKM/gas.html" class="card-link text-decoration-none text-dark">
-                <img src="./assets/img/gas.jpg" class="card-img-top" alt="Gas">
-                <div class="card-body">
-                <h6 class="card-title">Isi Ulang Gas Portabel : Tersedia Varian Gas Portabel</h6>
-                <div class="location-card-umkm">
-                    <i class="fas fa-map-marker-alt"></i> Taman Siswa
-                </div>
-                </div>
-            </a>
-            <div class="reaction d-flex justify-content-between align-items-center p-3">
-                <div>
-                <i class="bi bi-hand-thumbs-up like-btn"></i>
-                <span class="like-count">0</span>
-                <i class="bi bi-hand-thumbs-down dislike-btn ms-3"></i>
-                <span class="dislike-count">0</span>
-                </div>
-            </div>
-            </div>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="col-md-3">
-            <div class="card h-100 shadow umkm-item" data-category="makanan">
-            <a href="./detail UMKM/rtm.html" class="card-link text-decoration-none text-dark">
-                <img src="./assets/img/rtm3.jpg" class="card-img-top" alt="Dapur RTM">
-                <div class="card-body">
-                <h6 class="card-title">Dapur RTM : Aneka Jajanan Tradisonal</h6>
-                <div class="location-card-umkm">
-                    <i class="fas fa-map-marker-alt"></i> Banaran
-                </div>
-                </div>
-            </a>
-            <div class="reaction d-flex justify-content-between align-items-center p-3">
-                <div>
-                <i class="bi bi-hand-thumbs-up like-btn"></i>
-                <span class="like-count">0</span>
-                <i class="bi bi-hand-thumbs-down dislike-btn ms-3"></i>
-                <span class="dislike-count">0</span>
-                </div>
-            </div>
-            </div>
-        </div>
-
-        <!-- Card 4 -->
-        <div class="col-md-3">
-            <div class="card h-100 shadow umkm-item" data-category="makanan">
-            <a href="./detail UMKM/hasilbumi.html" class="card-link text-decoration-none text-dark">
-                <img src="./assets/img/bumi.jpg" class="card-img-top" alt="Hasil Bumi">
-                <div class="card-body">
-                <h6 class="card-title">Hasil Bumi : Sayuran segar dan Rempah-Rempah</h6>
-                <div class="location-card-umkm">
-                    <i class="fas fa-map-marker-alt"></i> Taman Siswa
-                </div>
-                </div>
-            </a>
-            <div class="reaction d-flex justify-content-between align-items-center p-3">
-                <div>
-                <i class="bi bi-hand-thumbs-up like-btn"></i>
-                <span class="like-count">0</span>
-                <i class="bi bi-hand-thumbs-down dislike-btn ms-3"></i>
-                <span class="dislike-count">0</span>
-                </div>
-            </div>
-            </div>
-        </div>
-
-        </div>
-    </div>
-    </section>
-
-    </section>
-
-
-
-    <section id="lokasi" class="py-5">
+  </div>
+<section id="lokasi" class="py-5">
     <div class="container text-center">
         <div class="lokasi-card p-4 rounded-4 shadow-lg mx-auto">
         <h1 class="mb-4 text-white fw-bold">Temukan Lokasi UMKM</h1>
-        <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d247.4739036193871!2d110.3971421859594!3d-7.058247753323418!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e708968a9b5ccc3%3A0x5027a76e356e080!2sPatemon%2C%20Kec.%20Gn.%20Pati%2C%20Kota%20Semarang%2C%20Jawa%20Tengah!5e0!3m2!1sid!2sid!4v1761825104240!5m2!1sid!2sid"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
+        <iframe src="https://www.google.com/maps/d/embed?mid=1IvU9cKICXOtwi3QsrOaRg_hZ4Ek8KKg&ehbc=2E312F" width="640" height="480"></iframe>
     </div>
     </section>
-
-
-
-
-
 
     <!-- footer -->
     <footer>
@@ -477,13 +515,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
-
-    <script>
-        document.getElementById("btnScan").addEventListener("click", function() {
-        alert("Fitur scanner akan aktif di versi berikutnya!");
-        // Nanti bisa diganti dengan kode QR scanner atau camera API
-        });
-    </script>
 
 </body>
 </html>

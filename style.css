@@ -30,7 +30,10 @@
     position: relative;
 }
 
-
+.text-justify {
+  text-align: justify;
+  text-justify: inter-word;
+}
 
 .glass-card {
     margin-top: 60px;
@@ -72,8 +75,6 @@
 ;
 }
 
-
-
 .card-link {
     text-decoration: none;
     color: inherit;
@@ -84,6 +85,16 @@
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
+}
+
+.hero-img {
+  height: 90vh;
+  object-fit: cover;
+  filter: brightness(60%);
+}
+.hero-section {
+  height: 90vh;
+  overflow: hidden;
 }
 
 .umkm-item:hover {
@@ -138,8 +149,6 @@
 
 
 
-
-
 .hero-section-2{
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://source.unsplash.com/1600x900/?nature,environment');
     background-image: url('./assets/img/hero3.jpg');
@@ -151,7 +160,7 @@
 
 .hero-section-3{
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://source.unsplash.com/1600x900/?nature,environment');
-    background-image: url('./img/berita.png');
+    background-image: url('./assets/img/berita.png');
     background-size: cover;
     background-position: center;
     min-height: 80vh;
@@ -871,3 +880,5 @@ footer .cols .news-col form button i{
 body {
   background-color: #fff !important;
 }
+
+
