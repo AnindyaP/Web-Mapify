@@ -927,3 +927,110 @@ body {
 }
 
 
+.news-image {
+    width: 100%;
+    height: auto;
+    max-width: 900px;       
+}
+
+.news-image-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.news-content {
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+@media (max-width: 992px) {
+    .news-title {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .news-title {
+        font-size: 1.5rem;
+        line-height: 1.3;
+    }
+
+    .meta-info span {
+        font-size: 0.9rem;
+    }
+
+    .news-content {
+        font-size: 1rem;
+    }
+}
+
+footer .cols {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap; 
+}
+
+footer .cols > div {
+    flex: 1;
+    min-width: 220px; 
+}
+
+footer h3, footer h4 {
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+footer p, footer a {
+    font-size: 0.95rem;
+    color: #ddd;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #fff;
+}
+
+#emailForm {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+
+@media (max-width: 992px) {
+    footer .cols {
+        gap: 20px;
+    }
+
+    footer p, footer a {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    footer .cols {
+        flex-direction: column;   
+    }
+
+    footer .cols > div {
+        width: 100%;
+    }
+
+    #emailForm {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    #emailForm input {
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+
+    #emailForm button {
+        border-radius: 5px;
+        width: 100%;
+    }
+}
+
